@@ -1,4 +1,52 @@
 $(document).ready(function () {
+  $(document).ready(function () {
+    $(".Info_Index_List").css("opacity", "0.3"); // 초기 투명도 설정
+
+    $(".Info_Index_List").on("mouseover", function () {
+      $(this).css("opacity", "1"); // 마우스를 올렸을 때 투명도 100%
+    });
+
+    $(".Info_Index_List").on("mouseout", function () {
+      $(this).css("opacity", "0.3"); // 마우스를 뗐을 때 투명도 30%
+    });
+  });
+
+  $("#BTN_Overview").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#Overview").offset().top,
+      },
+      800
+    );
+  });
+
+  $("#BTN_Records").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#Records").offset().top,
+      },
+      800
+    );
+  });
+
+  $("#BTN_Stats").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#Stats").offset().top,
+      },
+      800
+    );
+  });
+
+  $("#BTN_Quote").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#Quote").offset().top,
+      },
+      800
+    );
+  });
+
   $(".Info_hover_area_1").hover(
     function () {
       // 이미지 변경 전에 서서히 사라지게 함
@@ -77,18 +125,6 @@ $(document).ready(function () {
     }
   );
   // info 페이지 스크립트
-
-  $(document).ready(function () {
-    $(".Records_Content_Container").css("opacity", "0.3"); // 초기 투명도 설정
-
-    $(".Records_Content_Container").on("mouseover", function () {
-      $(this).css("opacity", "1"); // 마우스를 올렸을 때 투명도 100%
-    });
-
-    $(".Records_Content_Container").on("mouseout", function () {
-      $(this).css("opacity", "0.3"); // 마우스를 뗐을 때 투명도 30%
-    });
-  });
 
   // records 페이지 스크립트
 

@@ -19,19 +19,42 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+    <!--AOS 라이브러리 로드-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <!-- my script load -->
     <script src="js/script.js"></script>
   </head>
   <body style="background-color: #000000">
+    <script>
+      AOS.init();
+    </script>
     <div class="Info_Page">
       <div class="Info_BackgroundImg"><img src="img/Info_Img.png" /></div>
 
       <div class="Info_Content">
-        <div class="Info_Index"></div>
+        <div class="Info_Index">
+          <div class="font_Regular Info_Index_List" id="BTN_Overview">
+            OVERVIEW
+          </div>
+          <div class="font_Regular Info_Index_List" id="BTN_Records">
+            RECORDS
+          </div>
+          <div class="font_Regular Info_Index_List" id="BTN_Stats">STATS</div>
+          <div
+            class="font_Regular Info_Index_List"
+            style="margin-right: 0px"
+            id="BTN_Quote"
+          >
+            Quote
+          </div>
+        </div>
 
         <div class="Info_Title">T1 JUNGLE<br />ONER</div>
 
-        <div class="Info_Overview_Top">
+        <div class="Info_Overview_Top" id="Overview">
           <div class="Info_Overview_Title">팀의 어려움을 해결해주는 선봉장</div>
           <div class="font_Regular Info_Overview_Text">OVERVIEW</div>
         </div>
@@ -45,7 +68,7 @@
             <span class="Info_hover_font Info_hover_area_1">
               T1 아카데미에 연습생으로
             </span>
-            입단하며 T1과의 인연이 맺었습니다.
+            입단하며 T1과의 인연을 맺었습니다.
             <br />
             뛰어난 피지컬과 탁월한 교전 능력으로 구단의 많은 기대를 받았고,
             <br />
@@ -81,9 +104,13 @@
 
     <div class="Records_Page">
       <div class="Records_Page_Container">
-        <div class="Records_Title">Records</div>
+        <div class="Records_Title" id="Records">Records</div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Img">
             <img src="img/Records_img1.png" />
           </div>
@@ -97,7 +124,11 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Text_Left">
             오너 선수는 프로 통산 <span class="f_red">35개의</span
             ><br />챔피언을 사용했습니다
@@ -108,7 +139,11 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Img">
             <img src="img/Records_img3.png" />
           </div>
@@ -120,7 +155,11 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Text_Left">
             2024년 3월 13일<br />LCK 통산
             <span class="f_red">200승</span>을<br />달성했습니다
@@ -131,7 +170,11 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Img">
             <img src="img/Records_img5.png" />
           </div>
@@ -141,7 +184,11 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div class="Records_Content_Text_Left">
             2024년 8월 14일<br />LCK 통산 <span class="f_red">1000킬을</span
             ><br />달성했습니다
@@ -152,7 +199,12 @@
           </div>
         </div>
 
-        <div class="Records_Content_Container">
+        <div
+          class="Records_Content_Container"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-easing="ease-in-quint"
+        >
           <div class="Records_Content_Img">
             <img src="img/Records_img7.png" />
           </div>
@@ -170,7 +222,7 @@
 
     <div class="Statistics_Page">
       <div class="Statistics_Page_Container">
-        <div class="Statistics_Title">Player<br />Statistics</div>
+        <div class="Statistics_Title" id="Stats">Player<br />Statistics</div>
         <div id="Statistics_1" class="Statistics_Content_Chart"></div>
         <div class="Statistics_Chart_Description_Title">
           상승하는 팀 내 기여도
@@ -228,8 +280,15 @@
 
     <div class="Divider"></div>
 
-    <div class="Bottom_Page">
-      <div class="Bottom_Img"><img src="img/interview_img.png" /></div>
+    <div class="Bottom_Page" id="Quote">
+      <div
+        class="Bottom_Img"
+        data-aos="slide-up"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-quint"
+      >
+        <img src="img/interview_img.png" />
+      </div>
     </div>
   </body>
 </html>

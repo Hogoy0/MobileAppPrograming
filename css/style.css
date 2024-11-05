@@ -67,6 +67,17 @@
 .Info_Index {
   width: 898px;
   height: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Info_Index_List {
+  width: auto;
+  height: 24px;
+  margin-top: 24px;
+  margin-right: 24px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
 }
 
 .Info_Title {
@@ -166,8 +177,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 320px;
-  opacity: 0.3;
+
+  /*
   transition: opacity 0.3s ease;
+  */
 }
 
 .Records_Content_Img {
